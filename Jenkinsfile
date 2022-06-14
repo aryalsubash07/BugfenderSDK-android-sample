@@ -44,6 +44,7 @@ pipeline {
                          echo "--------- Building Project  -------------------"
                          //yarn
                          //cd android
+                         who
                          ./gradlew clean
                      """
                  }
