@@ -38,12 +38,7 @@ pipeline {
                  script {
                        sh """
                          #!/bin/bash -e
-                         // export USER_HOME=~/
-                         // export GRADLE_USER_HOME=~/.gradle
-                         // export ANDROID_HOME=~/android-sdk
                          echo "--------- Building Project  -------------------"
-                         //yarn
-                         //cd android
                          who
                          ./gradlew clean
                      """
@@ -56,11 +51,7 @@ pipeline {
              // Finish building and packaging the APK/AAB
              sh """
                  #!/bin/bash -e
-                 //export USER_HOME=~/¬
-                 //export GRADLE_USER_HOME=~/.gradle
-                 //export ANDROID_HOME=~/android-sdk
                  echo "--------- Building APK/AAB  -------------------"
-                 //cd android
                  pwd
                  ./gradlew ${BUNDLE_TYPE}${BUILD_TYPE}
              """
