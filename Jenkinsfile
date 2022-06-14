@@ -68,17 +68,4 @@ pipeline {
           }
         }
     }
-    post {
-        success {
-             //cleanWs()
-        }
-        failure {
-            script {
-               // cleanWs()
-            }
-        }
-        aborted {
-            // cleanWs()
-        }
-    }
 }
