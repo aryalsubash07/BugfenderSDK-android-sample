@@ -70,15 +70,15 @@ pipeline {
     }
     post {
         success {
-             cleanWs()
+             //cleanWs()
         }
         failure {
             script {
-                cleanWs()
+               // cleanWs()
             }
         }
         aborted {
-             cleanWs()
+            // cleanWs()
         }
     }
 }
