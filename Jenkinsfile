@@ -15,6 +15,7 @@ pipeline {
         VERSION_NAME = '1.0.0'
         BUILD_TYPE = 'Release'
         BUNDLE_TYPE= 'assemble'
+        EXPO_TOKEN = credentials('Apad-tokens')
     }
     stages {
         stage('Prepare') {
@@ -30,6 +31,8 @@ pipeline {
         stage("Inject Environment Variable") {
             steps {
                 echo "Inject Environment Variable"
+                 sh "echo -e 'versionCode=${VERSION_CODE}\nversionName=${VERSION_NAME}' > android/app_version.properties"
+
             }
         }
         stage("Clean"){
