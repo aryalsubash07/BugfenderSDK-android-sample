@@ -31,7 +31,7 @@ pipeline {
         stage("Inject Environment Variable") {
             steps {
                 echo "Inject Environment Variable"
-                 sh "echo -e 'versionCode=${VERSION_CODE}\nversionName=${VERSION_NAME}' > android/app_version.properties"
+                 //sh "echo -e 'versionCode=${VERSION_CODE}\nversionName=${VERSION_NAME}' > android/app_version.properties"
 
             }
         }
